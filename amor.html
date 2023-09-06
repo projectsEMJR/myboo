@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Boo</title>
+</head>
+<style>
+  body{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background: #202c33;
+    flex-direction: column;
+  }
+  header{
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  main{
+    margin: auto;
+    gap: 5rem;
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  button{
+    border-radius: 8px;
+    background-color: #aebac1;
+    padding: 4px 8px;
+    font-size: 16px;
+    border-color: #aebac1;
+
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: normal;
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-variation-settings: normal;
+    tab-size: 4;
+    --gray-0: #fff;
+    --gray-50: #f7f7f8;
+    --gray-100: #ececf1;
+    --gray-200: #d9d9e3;
+    --gray-300: #c5c5d2;
+    --gray-400: #acacbe;
+    --gray-500: #8e8ea0;
+    --gray-600: #565869;
+    --gray-700: #40414f;
+    --gray-800: #343541;
+    --gray-900: #202123;
+    --gray-950: #050509;
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-300);
+    --text-tertiary: var(--gray-500);
+    --surface-primary: var(--gray-900);
+    --surface-secondary: var(--gray-800);
+    --surface-tertiary: var(--gray-700);
+    --border-light: var(--gray-700);
+    --border-medium: var(--gray-600);
+    --border-heavy: var(--gray-500);
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    --tw-bg-opacity: 1;
+    border: 0 solid #d9d9e3;
+    box-sizing: border-box;
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(69,89,164,.5);
+    --tw-ring-offset-shadow: 0 0 transparent;
+    --tw-ring-shadow: 0 0 transparent;
+    --tw-shadow: 0 0 transparent;
+    --tw-shadow-colored: 0 0 transparent;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+    text-decoration: inherit;
+    display: flex;
+    height: 2.75rem;
+    min-height: 44px;
+    flex-grow: 1;
+    cursor: pointer;
+    align-items: center;
+    gap: .75rem;
+    overflow: hidden;
+    border-radius: .375rem;
+    border-width: 1px;
+    border-color: hsla(0,0%,100%,.2);
+    padding-left: .75rem;
+    padding-right: .75rem;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgba(255,255,255,var(--tw-text-opacity));
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .2s;
+    color: #202c33;
+    font-weight: 600;
+  }
+
+</style>
+<body>
+   <header>Quer casar comigo minha princesa?</header>
+    <main>
+      <button id="sim">Sim</button>
+      <button id="nao">Não</button>
+    </main>
+
+    <script>
+        // Função para mover o botão "Não" para uma posição aleatória na página
+        document.getElementById("nao").addEventListener("mouseover", function() {
+            var maxX = window.innerWidth - this.clientWidth;
+            var maxY = window.innerHeight - this.clientHeight;
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            this.style.position = "absolute";
+            this.style.left = randomX + "px";
+            this.style.top = randomY + "px";
+        });
+
+        // Função para exibir um alerta e reproduzir um áudio quando o botão "Sim" for clicado
+        document.getElementById("sim").addEventListener("click", function() {
+            alert("Eu Te Amo e quero viver com você para sempre meu Amor! <3 <3");
+            
+            var audio = new Audio("seu-arquivo-de-audio.mp3"); // Substitua "seu-arquivo-de-audio.mp3" pelo caminho do seu arquivo de áudio
+            audio.play();
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+backendserver cloud
